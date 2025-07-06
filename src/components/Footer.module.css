@@ -1,0 +1,142 @@
+.footerSection {
+    background-color: var(--cor-azul-escuro);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Regra global que também se aplica aqui */
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 60px 20px;
+    overflow: hidden;
+}
+
+.footerInfo {
+    color: var(--cor-texto-claro);
+    text-align: right;
+    font-size: 0.9rem;
+}
+
+.footerInfo p {
+    margin: 5px 0;
+}
+
+.footerInfo a {
+    color: var(--cor-texto-claro);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.footerLogo img {
+    width: 250px;
+    height: 80px;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+}
+
+.developerCredit {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+/* --- RAFA MUNHOZ LOGO (Adaptado para o Footer) --- */
+.svgLogoLink {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.rafaMunhozLogo {
+    width: 140px; /* Tamanho menor para o rodapé */
+    height: auto;
+    overflow: visible;
+}
+
+.rafaMunhozLogo text,
+.rafaMunhozLogo tspan {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px; /* Tamanho menor para o rodapé */
+}
+
+.rafaMunhozLogo .logoFirstName {
+    font-weight: 700;
+    fill: var(--cor-texto-claro); /* Cor para o rodapé */
+    transition: fill 0.4s ease;
+}
+
+.rafaMunhozLogo .logoLastName {
+    font-weight: 400;
+    fill: var(--cor-texto-claro); /* Cor para o rodapé */
+}
+
+.rafaMunhozLogo .logoUnderline {
+    stroke: var(--cor-destaque);
+    stroke-width: 2.5;
+    fill: none;
+    stroke-dasharray: 195;
+    stroke-dashoffset: 195;
+    transition: stroke-dashoffset 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.rafaMunhozLogo .logoFlair {
+    fill: var(--cor-destaque);
+    transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.svgLogoLink:hover .logoUnderline {
+    stroke-dashoffset: 0;
+}
+
+.svgLogoLink:hover .logoFirstName {
+    fill: var(--cor-destaque);
+}
+
+.svgLogoLink:hover .logoFlair {
+    transform: translate(195px, 25px) rotate(180deg);
+}
+
+/* --- THEME SWITCHER --- */
+.themeSwitcher {
+    margin-top: 20px;
+}
+
+.themeButton {
+    background: none;
+    border: 1px solid var(--cor-texto-claro);
+    color: var(--cor-texto-claro);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
+    margin: 0 5px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.themeButton:hover,
+.active { /* A classe .active será controlada pelo React */
+    background-color: var(--cor-texto-claro);
+    color: var(--cor-azul-escuro);
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 768px) {
+    .footerSection {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footerInfo {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .developerCredit {
+        justify-content: center;
+    }
+}
