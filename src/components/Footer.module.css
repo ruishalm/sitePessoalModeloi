@@ -124,6 +124,22 @@
     color: var(--cor-azul-escuro);
 }
 
+/* --- DARK THEME --- */
+/* O rodapé tem fundo escuro em ambos os temas, então o texto precisa ser claro em ambos. */
+:global(body.dark-theme) .footerInfo,
+:global(body.dark-theme) .footerInfo a,
+:global(body.dark-theme) .rafaMunhozLogo .logoFirstName,
+:global(body.dark-theme) .rafaMunhozLogo .logoLastName {
+    color: var(--cor-texto-escuro); /* No tema escuro, --cor-texto-escuro é a cor clara */
+    fill: var(--cor-texto-escuro);
+}
+
+/* Estilo para o botão ativo no tema escuro */
+:global(body.dark-theme) .active {
+    background-color: var(--cor-texto-escuro);
+    color: var(--cor-bege-fundo);
+}
+
 /* --- RESPONSIVIDADE --- */
 @media (max-width: 768px) {
     .footerSection {

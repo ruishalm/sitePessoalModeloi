@@ -1,5 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import Footer from './components/Footer';
+import Header from './components/Header';
+import Principal from './components/Principal';
+import Consultorio from './components/Consultorio';
+import Servicos from './components/Servicos';
+import Sobre from './components/Sobre';
+import Faq from './components/Faq';
 
 function App() {
   // Define o tipo para o tema, garantindo que só pode ser 'light' ou 'dark'
@@ -29,8 +35,13 @@ function App() {
 
   return (
     <>
+      <Header />
+      <Principal />
       <main>
-        {/* Aqui virão as outras seções do site */}
+        <Consultorio />
+        <Servicos />
+        <Sobre />
+        <Faq />
       </main>
       <Footer theme={theme} onThemeSwitch={handleThemeSwitch} />
     </>

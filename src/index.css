@@ -1,1 +1,54 @@
+/* --- FONTES E ESTILOS GLOBAIS --- */
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+:root {
+    --cor-azul-escuro: #3D5A80;
+    --cor-azul-claro: #98C1D9;
+    --cor-bege-fundo: #F4F1DE;
+    --cor-bege-secao: #E0DDCF;
+    --cor-destaque: #EE6C4D;
+    --cor-texto-escuro: #293241;
+    --cor-texto-claro: #F4F1DE;
+    --cor-texto-secundario: #888;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--cor-bege-fundo);
+    color: var(--cor-texto-escuro);
+    line-height: 1.6;
+    padding-top: 80px;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+}
+
+main > section {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 60px 20px;
+    overflow: hidden;
+}
+
+/* --- DARK THEME --- */
+body.dark-theme {
+    --cor-bege-fundo: #293241;
+    --cor-bege-secao: #3D5A80;
+    --cor-texto-escuro: #F4F1DE;
+    --cor-texto-claro: #293241;
+    --cor-texto-secundario: #98C1D9;
+}
+
+/* --- RESPONSIVIDADE --- */
+
+@media (max-width: 1024px) {
+}
+
+@media (max-width: 768px) {
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.2rem; }
+}
