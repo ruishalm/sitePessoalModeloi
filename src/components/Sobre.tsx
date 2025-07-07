@@ -1,19 +1,17 @@
 import styles from './Sobre.module.css';
+import perfilImage from '../assets/imagens/perfil.png';
 
-// Placeholder para a imagem
-const aboutImageSrc = "https://via.placeholder.com/400x400.png?text=Foto";
 
 function Sobre() {
   return (
     <section className={styles.aboutSection}>
       <div className={styles.aboutText}>
         <h2>Sobre Mim</h2>
-        <p>blablabla</p>
-        <blockquote>blablabla</blockquote>
-        <p>blablabla</p>
+        <p>Rosangela Chicarelli eh minha mae, tem uns anos ai  e ja fez umas coisas ai tb.</p>
+        <blockquote>"SE VOCE QUEBRAR ISSO EU RANCO OUTRO DAS TUA COSTELA!"</blockquote>
       </div>
       <div className={styles.aboutImage}>
-        <img src={aboutImageSrc} alt="Foto de perfil" />
+        <img src={perfilImage} alt="Foto de perfil de Rosangela Chicarelli" />
       </div>
     </section>
   );

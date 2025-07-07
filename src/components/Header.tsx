@@ -20,12 +20,12 @@ function Header() {
           </a>
         </div>
         <div className={styles.headerTitle}>
-          Blabla de Bla Blala
+          Rosangela Chicarelli
         </div>
         <div className={styles.headerCta}>
-          <a href="https://wa.me/5511999998888" target="_blank" rel="noopener noreferrer" className={styles.whatsappButton}>
+          <a href="https://wa.me/5515981876442" target="_blank" rel="noopener noreferrer" className={styles.whatsappButton}>
             <WhatsAppIcon />
-            <span>wppblabla</span>
+            <span>Agende sua Sessão</span>
           </a>
         </div>
       </div>

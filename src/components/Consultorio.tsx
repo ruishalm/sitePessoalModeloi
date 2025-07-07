@@ -1,11 +1,11 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import styles from './Consultorio.module.css';
+import carrocel1 from '..//assets/imagens/carrocel1.png';
+import carrocel2 from '../assets/imagens/carrocel2.png';
 
-// Vamos usar placeholders por enquanto. Depois podemos receber isso como props.
 const images = [
-  "https://via.placeholder.com/500x500.png?text=Imagem+1",
-  "https://via.placeholder.com/500x500.png?text=Imagem+2",
-  "https://via.placeholder.com/500x500.png?text=Imagem+3"
+  carrocel1,
+  carrocel2,
 ];
 
 function Consultorio() {
@@ -16,11 +16,21 @@ function Consultorio() {
     setCurrentIndex(newIndex);
   };
 
+  // Efeito para o carrossel automático
+  useEffect(() => {
+    const interval = setInterval(() => {
+      moveCarousel(1);
+    }, 5000); // Muda a cada 5 segundos
+
+    return () => clearInterval(interval);
+  }, [currentIndex]);
+
   return (
     <section className={styles.officeSection}>
       <div className={styles.textContent}>
-        <h2>blablabla</h2>
-        <p>blablabla</p>
+      
+        <h2>Atendimento 100% Online</h2>
+        <p>Realize suas sessões no conforto e na segurança da sua casa. A terapia online oferece a mesma eficácia e acolhimento do atendimento presencial, com a flexibilidade que você precisa.</p>
       </div>
       <div className={styles.imageCarousel}>
         <div

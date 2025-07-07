@@ -15,8 +15,7 @@ function Footer({ theme, onThemeSwitch }: FooterProps) {
         <img src="" alt="Logo da Cliente" />
       </div>
       <div className={styles.footerInfo}>
-        <p>CRP 0000000 | <strong>Blabla de Bla Blala</strong></p>
-        <p>endereco blabla</p>
+        <p><strong>Terapeuta TRG</strong></p>
         <p>Todos os Direitos Reservados</p>
         <div className={styles.developerCredit}>
           <span>Desenvolvido por</span>
