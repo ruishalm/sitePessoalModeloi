@@ -11,30 +11,35 @@ interface FooterProps {
 
 function Footer({ theme, onThemeSwitch }: FooterProps) {
   return (
-    <footer className={styles.footerSection}>
-      <div className={styles.footerLogo}><LogoTerapeuta /></div>
-      <div className={styles.footerInfo}>
-        <p><strong>Terapeuta TRG</strong></p>
-        <p>Todos os Direitos Reservados</p>
-        <div className={styles.developerCredit}>
-          <span>Desenvolvido por</span>
-          <Logo
-            variant="inverse"
-            size="small"
-            href="https://wa.me/5515981539443"
-            title="Fale com Rafa Munhoz no WhatsApp"
-          />
+    <div className={styles.footerBackground}>
+      <footer className={styles.footerContent}>
+        <div className={styles.footerLeft}>
+          <div className={styles.headerLogo}>
+            <LogoTerapeuta />
+          </div>
+          <p className={styles.crpInfo}> <strong>Rosangela Chicarelli</strong></p>
         </div>
+
         <div className={styles.themeSwitcher}>
-          <button className={`${styles.themeButton} ${theme === 'light' ? styles.active : ''}`} data-theme="light" title="Tema Claro" onClick={() => onThemeSwitch('light')}>
-            <i className="fas fa-sun"></i>
-          </button>
-          <button className={`${styles.themeButton} ${theme === 'dark' ? styles.active : ''}`} data-theme="dark" title="Tema Escuro" onClick={() => onThemeSwitch('dark')}>
-            <i className="fas fa-moon"></i>
-          </button>
+          <div className={styles.themeSwitcher}>
+              <button className={`${styles.themeButton} ${theme === 'light' ? styles.active : ''}`} data-theme="light" title="Tema Claro" onClick={() => onThemeSwitch('light')}>
+                  <i className="fas fa-sun"></i>
+              </button>
+              <button className={`${styles.themeButton} ${theme === 'dark' ? styles.active : ''}`} data-theme="dark" title="Tema Escuro" onClick={() => onThemeSwitch('dark')}>
+                  <i className="fas fa-moon"></i>
+              </button>
+          </div>
         </div>
-      </div>
-    </footer>
+
+        <div className={styles.footerRight}>
+          <p>Todos os Direitos Reservados</p>
+          <div className={styles.developerCredit}>
+              <span>Desenvolvido por</span>
+              <Logo variant="inverse" size="small" href="https://wa.me/5515981539443" title="Fale com Rafa Munhoz no WhatsApp" />
+          </div>
+        </div>
+      </footer>
+    </div>
   );
 }
 

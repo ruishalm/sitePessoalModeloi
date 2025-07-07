@@ -16,7 +16,7 @@ function Servicos() {
       <p>Através de um método estruturado, vamos juntos reprocessar as memórias que geram sofrimento e construir um futuro mais leve e equilibrado.</p>
       <div className={styles.servicesGrid}>
         {servicesData.map((service, index) => (
-          <ServiceCard key={index} title={service.title} description={service.description} />
+          <ServiceCard key={index} title={service.title} description={service.description} animationDelay={index * 100} />
         ))}
       </div>
     </section>
