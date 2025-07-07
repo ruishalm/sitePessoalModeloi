@@ -16,7 +16,12 @@ function Servicos() {
       <p>blablabla</p>
       <div className={styles.servicesGrid}>
         {servicesData.map((service, index) => (
-          <ServiceCard key={index} title={service.title} description={service.description} />
+          <ServiceCard
+            key={index}
+            title={service.title}
+            description={service.description}
+            animationDelay={index * 150}
+          />
         ))}
       </div>
     </section>

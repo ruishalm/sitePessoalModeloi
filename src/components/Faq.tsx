@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import styles from './Faq.module.css';
 import FaqItem from './FaqItem';
+import useScrollAnimation from '../hooks/useScrollAnimation';
 
 // Dados para o FAQ. No futuro, podem vir de uma API.
 const faqData = [
@@ -25,16 +26,29 @@ function Faq() {
     setOpenIndex(openIndex === index ? null : index);
   };
 
+  // Hook de animação para o bloco de contato
+  const [contactRef, isContactVisible] = useScrollAnimation<HTMLDivElement>({ threshold: 0.5 });
+
   return (
     <section className={styles.faqSection}>
       <h2>blablabla</h2>
       <div className={styles.faqContentWrapper}>
         <div className={styles.faqContainer}>
           {faqData.map((item, index) => (
-            <FaqItem key={index} question={item.question} answer={item.answer} isOpen={openIndex === index} onClick={() => handleToggle(index)} />
+            <FaqItem
+              key={index}
+              question={item.question}
+              answer={item.answer}
+              isOpen={openIndex === index}
+              onClick={() => handleToggle(index)}
+              animationDelay={index * 100}
+            />
           ))}
         </div>
-        <div className={styles.faqContact}>
+        <div
+          ref={contactRef}
+          className={`${styles.faqContact} animate-on-scroll slide-in-right ${isContactVisible ? 'is-visible' : ''}`}
+        >
           <h3>blablabla</h3>
           <p>blablabla</p>
           <a href="#/" className={styles.whatsappButton}>

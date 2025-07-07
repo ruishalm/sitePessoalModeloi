@@ -1,18 +1,21 @@
 /* --- FONTES E ESTILOS GLOBAIS --- */
+@import './animations.css';
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
 :root {
-    --cor-azul-escuro: #3D5A80;
-    --cor-azul-claro: #98C1D9;
-    --cor-bege-fundo: #F4F1DE;
-    --cor-bege-secao: #E0DDCF;
-    --cor-destaque: #EE6C4D;
-    --cor-texto-escuro: #293241;
-    --cor-texto-claro: #F4F1DE;
+    /* Tema Claro: Tons quentes de laranja e pêssego para o fundo */
+    --cor-azul-escuro: #af2b2b;      /* Marrom escuro para header/footer */
+    --cor-azul-claro: #F4A261;       /* Laranja para detalhes secundários */
+    --cor-bege-fundo: #FFF0E5;       /* Fundo pêssego bem claro */
+    --cor-bege-secao: #FFE5D9;       /* Fundo de seção um pouco mais escuro */
+    --cor-destaque: #E63946;         /* Vermelho forte para destaque */
+    --cor-texto-escuro: #452E21;     /* Texto em marrom bem escuro para contraste */
+    --cor-texto-claro: #FFF0E5;      /* Cor de texto para fundos escuros */
     --cor-card-fundo: #FFFFFF;
-    --cor-card-fundo-ativo: #f9f9f9;
-    --cor-card-borda: #e0e0e0;
+    --cor-card-fundo-ativo: #FFFBF8;
+    --cor-card-borda: #EDE6E1;
+    --cor-header-fundo: rgba(255, 240, 229, 0.85); /* Fundo do header com base no fundo da página */
 }
 
 body {
@@ -28,7 +31,9 @@ h1, h2, h3 {
     font-weight: 700;
 }
 
-main > section {
+/* Alterado de 'main > section' para 'main section' para ser compatível
+   com os wrappers de animação que adicionamos no App.tsx */
+main section {
     max-width: 1100px;
     margin-left: auto;
     margin-right: auto;
@@ -38,13 +43,18 @@ main > section {
 
 /* --- DARK THEME --- */
 body.dark-theme {
-    --cor-bege-fundo: #293241;
-    --cor-bege-secao: #3D5A80;
-    --cor-texto-escuro: #F4F1DE;
-    --cor-texto-claro: #293241;
-    --cor-card-fundo: #4a6180;
-    --cor-card-fundo-ativo: #556b8b;
-    --cor-card-borda: #556b8b;
+    /* Tema Escuro: Tons de vinho e roxo escuro */
+    --cor-azul-escuro: #4A2A3C;      /* Vinho escuro para header/footer */
+    --cor-azul-claro: #8D5A78;       /* Vinho claro para detalhes secundários */
+    --cor-bege-fundo: #2B1D25;       /* Fundo roxo bem escuro */
+    --cor-bege-secao: #4A2A3C;       /* Fundo de seção vinho escuro */
+    --cor-destaque: #C71F66;         /* Magenta/vinho vibrante para destaque */
+    --cor-texto-escuro: #F5EBE0;     /* Texto em tom creme para contraste */
+    --cor-texto-claro: #2B1D25;      /* Cor de texto para fundos claros */
+    --cor-card-fundo: #5E4B59;
+    --cor-card-fundo-ativo: #6D5A68;
+    --cor-card-borda: #6D5A68;
+    --cor-header-fundo: rgba(43, 29, 37, 0.85); /* Fundo do header com base no fundo da página */
 }
 
 /* --- RESPONSIVIDADE --- */

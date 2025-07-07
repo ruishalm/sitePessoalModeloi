@@ -1,0 +1,45 @@
+/*
+  Este arquivo contém as classes de animação que serão aplicadas aos elementos
+  quando eles se tornarem visíveis na tela.
+*/
+
+/* Classe base para todos os elementos que serão animados na rolagem.
+   Começa invisível e prepara a transição. */
+.animate-on-scroll {
+    opacity: 0;
+    transition: opacity 0.7s ease-out, transform 0.7s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+/* --- Animação: Fade In (Aparecer suavemente) --- */
+.fade-in {
+    /* A opacidade já é 0 pela classe base */
+}
+
+/* --- Animação: Slide In from Bottom (Deslizar de baixo para cima) --- */
+.slide-in-up {
+    transform: translateY(40px);
+}
+
+/* --- Animação: Slide In from Left (Deslizar da esquerda para a direita) --- */
+.slide-in-left {
+    transform: translateX(-40px);
+}
+
+/* --- Animação: Slide In from Right (Deslizar da direita para a esquerda) --- */
+.slide-in-right {
+    transform: translateX(40px);
+}
+
+/* --- Animação: Scale Up (Aumentar de tamanho) --- */
+.scale-up {
+    transform: scale(0.95);
+}
+
+/*
+  Classe de ativação: Quando um elemento animável se torna visível,
+  esta classe é adicionada para movê-lo para seu estado final.
+*/
+.is-visible {
+    opacity: 1;
+    transform: translateY(0) translateX(0) scale(1);
+}
