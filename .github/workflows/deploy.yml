@@ -1,5 +1,5 @@
-# Workflow simples para implantar conteúdo estático nas GitHub Pages
-name: Deploy static content to Pages
+# Workflow para implantar conteúdo estático nas GitHub Pages
+name: Deploy to GitHub Pages
 
 on:
   # Executa em pushes direcionados ao branch padrão
@@ -11,44 +11,40 @@ on:
   # Permite que você execute este fluxo de trabalho manualmente na guia Ações
   workflow_dispatch:
 
-# Define as permissões do GITHUB_TOKEN para permitir a implantação nas GitHub Pages
 permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-# Permite apenas uma implantação simultânea, pulando as execuções enfileiradas entre a em andamento e a mais recente.
-concurrency:
-  group: 'pages'
-  cancel-in-progress: false
+  contents: write
 
 jobs:
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: 'npm'
+
       - name: Install dependencies
         run: npm install
+
       - name: Build
         # Passa o nome da branch para o processo de build do Vite
         run: npm run build
         env:
           GITHUB_REF_NAME: ${{ github.ref_name }}
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: './dist'
+
       - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          # Diretório que o passo de "Build" gerou
+          publish_dir: ./dist
+          # O diretório de destino na branch `gh-pages`
+          # Se for a branch 'main', o destino é a raiz ('.').
+          # Senão, é o nome da branch (ex: 'cliente-rosangela-chicarelli').
+          destination_dir: ${{ github.ref_name == 'main' && '.' || github.ref_name }}
+          # Mantém os arquivos de outras branches de clientes quando não estamos na 'main'
+          keep_files: ${{ github.ref_name != 'main' }}

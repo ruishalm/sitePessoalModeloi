@@ -3,18 +3,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
 :root {
-    /* Paleta de cores quentes com tons de terracota e beges suaves */
-    --cor-azul-escuro: #3D3430;      /* Um cinza bem escuro e quente para seções de destaque (header/footer) */
-    --cor-azul-claro: #F4A261;       /* Um laranja/damasco claro para detalhes secundários */
-    --cor-bege-fundo: #FFF9F5;       /* Um off-white bem claro e quente para o fundo principal */
-    --cor-bege-secao: #F7EBE1;       /* Um bege um pouco mais escuro para o fundo de seções */
-    --cor-destaque: #E07A5F;         /* O novo destaque, um terracota/laranja queimado suave */
-    --cor-texto-escuro: #4A4441;     /* Um cinza-chumbo/marrom escuro para o texto principal */
-    --cor-texto-claro: #FFF9F5;      /* Cor do texto para fundos escuros, igual ao fundo claro */
+    /* Tema Claro: Tons quentes de laranja e pêssego para o fundo */
+    --cor-azul-escuro: #af2b2b;      /* Marrom escuro para header/footer */
+    --cor-azul-claro: #F4A261;       /* Laranja para detalhes secundários */
+    --cor-bege-fundo: #FFF0E5;       /* Fundo pêssego bem claro */
+    --cor-bege-secao: #FFE5D9;       /* Fundo de seção um pouco mais escuro */
+    --cor-destaque: #E63946;         /* Vermelho forte para destaque */
+    --cor-texto-escuro: #452E21;     /* Texto em marrom bem escuro para contraste */
+    --cor-texto-claro: #FFF0E5;      /* Cor de texto para fundos escuros */
     --cor-card-fundo: #FFFFFF;
-    --cor-card-fundo-ativo: #FFFBF8; /* Um branco levemente aquecido para o card ativo */
+    --cor-card-fundo-ativo: #FFFBF8;
     --cor-card-borda: #EDE6E1;
-    --cor-header-fundo: rgba(255, 249, 245, 0.85);
+    --cor-header-fundo: rgba(255, 240, 229, 0.85); /* Fundo do header com base no fundo da página */
 }
 
 body {
@@ -40,15 +40,18 @@ main > section {
 
 /* --- DARK THEME --- */
 body.dark-theme {
-    /* Paleta escura komplementar, com foco em conforto visual */
-    --cor-bege-fundo: #2C252D;       /* Um fundo quase preto, mas com um toque quente */
-    --cor-bege-secao: #3D3A34;       /* O cinza escuro do tema claro vira o fundo da seção */
-    --cor-texto-escuro: #F2E9E4;     /* O bege de seção do tema claro vira o texto principal */
-    --cor-texto-claro: #2C252D;      /* Cor de texto para elementos que ficam claros no tema escuro */
-    --cor-card-fundo: #4A3F4B;
-    --cor-card-fundo-ativo: #5E515F;
-    --cor-card-borda: #5E515F;
-    --cor-header-fundo: rgba(44, 37, 45, 0.85);
+    /* Tema Escuro: Tons de vinho e roxo escuro */
+    --cor-azul-escuro: #4A2A3C;      /* Vinho escuro para header/footer */
+    --cor-azul-claro: #8D5A78;       /* Vinho claro para detalhes secundários */
+    --cor-bege-fundo: #2B1D25;       /* Fundo roxo bem escuro */
+    --cor-bege-secao: #4A2A3C;       /* Fundo de seção vinho escuro */
+    --cor-destaque: #C71F66;         /* Magenta/vinho vibrante para destaque */
+    --cor-texto-escuro: #F5EBE0;     /* Texto em tom creme para contraste */
+    --cor-texto-claro: #2B1D25;      /* Cor de texto para fundos claros */
+    --cor-card-fundo: #5E4B59;
+    --cor-card-fundo-ativo: #6D5A68;
+    --cor-card-borda: #6D5A68;
+    --cor-header-fundo: rgba(43, 29, 37, 0.85); /* Fundo do header com base no fundo da página */
 }
 
 /* --- RESPONSIVIDADE --- */
