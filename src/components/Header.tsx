@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './Header.module.css';
 
 // Para manter o código limpo, o ícone do WhatsApp foi extraído para seu próprio componente.
