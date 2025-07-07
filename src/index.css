@@ -3,16 +3,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
 :root {
-    --cor-azul-escuro: #3D5A80;
-    --cor-azul-claro: #98C1D9;
-    --cor-bege-fundo: #F4F1DE;
-    --cor-bege-secao: #E0DDCF;
-    --cor-destaque: #EE6C4D;
-    --cor-texto-escuro: #293241;
-    --cor-texto-claro: #F4F1DE;
+    /* Paleta de cores quentes com tons de terracota e beges suaves */
+    --cor-azul-escuro: #3D3430;      /* Um cinza bem escuro e quente para seções de destaque (header/footer) */
+    --cor-azul-claro: #F4A261;       /* Um laranja/damasco claro para detalhes secundários */
+    --cor-bege-fundo: #FFF9F5;       /* Um off-white bem claro e quente para o fundo principal */
+    --cor-bege-secao: #F7EBE1;       /* Um bege um pouco mais escuro para o fundo de seções */
+    --cor-destaque: #E07A5F;         /* O novo destaque, um terracota/laranja queimado suave */
+    --cor-texto-escuro: #4A4441;     /* Um cinza-chumbo/marrom escuro para o texto principal */
+    --cor-texto-claro: #FFF9F5;      /* Cor do texto para fundos escuros, igual ao fundo claro */
     --cor-card-fundo: #FFFFFF;
-    --cor-card-fundo-ativo: #f9f9f9;
-    --cor-card-borda: #e0e0e0;
+    --cor-card-fundo-ativo: #FFFBF8; /* Um branco levemente aquecido para o card ativo */
+    --cor-card-borda: #EDE6E1;
+    --cor-header-fundo: rgba(255, 249, 245, 0.85);
 }
 
 body {
@@ -38,13 +40,15 @@ main > section {
 
 /* --- DARK THEME --- */
 body.dark-theme {
-    --cor-bege-fundo: #293241;
-    --cor-bege-secao: #3D5A80;
-    --cor-texto-escuro: #F4F1DE;
-    --cor-texto-claro: #293241;
-    --cor-card-fundo: #4a6180;
-    --cor-card-fundo-ativo: #556b8b;
-    --cor-card-borda: #556b8b;
+    /* Paleta escura komplementar, com foco em conforto visual */
+    --cor-bege-fundo: #2C252D;       /* Um fundo quase preto, mas com um toque quente */
+    --cor-bege-secao: #3D3A34;       /* O cinza escuro do tema claro vira o fundo da seção */
+    --cor-texto-escuro: #F2E9E4;     /* O bege de seção do tema claro vira o texto principal */
+    --cor-texto-claro: #2C252D;      /* Cor de texto para elementos que ficam claros no tema escuro */
+    --cor-card-fundo: #4A3F4B;
+    --cor-card-fundo-ativo: #5E515F;
+    --cor-card-borda: #5E515F;
+    --cor-header-fundo: rgba(44, 37, 45, 0.85);
 }
 
 /* --- RESPONSIVIDADE --- */

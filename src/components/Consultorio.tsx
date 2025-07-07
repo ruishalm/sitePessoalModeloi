@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import styles from './Consultorio.module.css';
-import carrocel1 from '..//assets/imagens/carrocel1.png';
+import carrocel1 from '../assets/imagens/carrocel1.png';
 import carrocel2 from '../assets/imagens/carrocel2.png';
 
 const images = [
@@ -16,11 +16,11 @@ function Consultorio() {
     setCurrentIndex(newIndex);
   };
 
-  // Efeito para o carrossel automático
+  
   useEffect(() => {
     const interval = setInterval(() => {
       moveCarousel(1);
-    }, 5000); // Muda a cada 5 segundos
+    }, 5000); 
 
     return () => clearInterval(interval);
   }, [currentIndex]);
@@ -30,7 +30,7 @@ function Consultorio() {
       <div className={styles.textContent}>
       
         <h2>Atendimento 100% Online</h2>
-        <p>Realize suas sessões no conforto e na segurança da sua casa. A terapia online oferece a mesma eficácia e acolhimento do atendimento presencial, com a flexibilidade que você precisa.</p>
+        <p>Realize suas sessões no conforto e na segurança da sua casa. A terapia online oferece a mesma eficácia e acolhimento do atendimento presencial, com a flexibilidade e segurancque você precisa.</p>
       </div>
       <div className={styles.imageCarousel}>
         <div

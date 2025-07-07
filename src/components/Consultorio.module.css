@@ -24,7 +24,9 @@
 .carouselImages img {
     width: 100%;
     height: 500px;
-    object-fit: cover;
+    /* Garante que a imagem inteira apareça, sem distorção */
+    object-fit: contain;
+    background-color: #1a1a1a; /* Fundo escuro para as laterais */
     flex-shrink: 0;
 }
 
