@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import styles from './Faq.module.css';
 import FaqItem from './FaqItem';
 

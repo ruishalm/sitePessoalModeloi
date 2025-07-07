@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import styles from './Consultorio.module.css';
 
 // Vamos usar placeholders por enquanto. Depois podemos receber isso como props.
