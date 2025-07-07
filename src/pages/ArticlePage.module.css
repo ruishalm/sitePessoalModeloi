@@ -1,0 +1,62 @@
+.articlePage {
+    max-width: 800px;
+    margin: 60px auto; /* Adiciona margem vertical para afastar do header e do footer */
+    padding: 40px 20px;
+    background-color: var(--cor-card-fundo);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.articleHeader {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--cor-card-borda);
+}
+
+.articleHeader h1 {
+    font-size: 2.5rem;
+    color: var(--cor-destaque);
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.articleDate {
+    font-size: 0.9rem;
+    color: var(--cor-texto-escuro);
+    opacity: 0.7;
+}
+
+.articleContent {
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+.articleContent h2 {
+    font-size: 1.8rem;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: var(--cor-texto-escuro);
+}
+
+.articleContent p {
+    margin-bottom: 20px;
+}
+
+.backLink {
+    display: inline-block;
+    margin-top: 40px;
+    color: var(--cor-destaque);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.articleNotFound {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.articleNotFound h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}

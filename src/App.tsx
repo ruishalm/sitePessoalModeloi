@@ -1,15 +1,10 @@
 import { useState, useEffect } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import Footer from './components/Footer';
 import Header from './components/Header';
-// Importe os componentes de seção
-import Principal from './components/Principal';
-import Consultorio from './components/Consultorio';
-import Servicos from './components/Servicos';
-import Sobre from './components/Sobre';
-import Faq from './components/Faq';
-
-// 1. Importe o hook de animação
-import useScrollAnimation from './hooks/useScrollAnimation';
+import HomePage from './pages/HomePage';
+import BlogPage from './pages/BlogPage';
+import ArticlePage from './pages/ArticlePage';
 
 function App() {
   // Define o tipo para o tema, garantindo que só pode ser 'light' ou 'dark'
@@ -37,40 +32,17 @@ function App() {
     }
   }, []);
 
-  // 2. Crie uma ref e um estado de visibilidade para cada seção que será animada
-  const [principalRef, isPrincipalVisible] = useScrollAnimation<HTMLDivElement>({ threshold: 0.4 });
-  const [consultorioRef, isConsultorioVisible] = useScrollAnimation<HTMLDivElement>({ threshold: 0.2 });
-  const [servicosRef, isServicosVisible] = useScrollAnimation<HTMLDivElement>({ threshold: 0.2 });
-  const [sobreRef, isSobreVisible] = useScrollAnimation<HTMLDivElement>({ threshold: 0.2 });
-  const [faqRef, isFaqVisible] = useScrollAnimation<HTMLDivElement>({ threshold: 0.2 });
-
   return (
     <>
       <Header />
-      {/* 3. Aplique a ref e as classes CSS no elemento que você quer animar.
-         Neste caso, estamos envolvendo cada componente de seção em uma `div`
-         para aplicar a animação a todo o bloco. */}
-      <div ref={principalRef} className={`animate-on-scroll fade-in ${isPrincipalVisible ? 'is-visible' : ''}`}>
-        <Principal />
+      <div className="site-content">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/artigos" element={<BlogPage />} />
+          <Route path="/artigos/:articleId" element={<ArticlePage />} />
+          {/* Adicione outras rotas aqui se necessário */}
+        </Routes>
       </div>
-      <main>
-        <div ref={consultorioRef} className={`animate-on-scroll slide-in-up ${isConsultorioVisible ? 'is-visible' : ''}`}>
-          <Consultorio />
-        </div>
-
-        {/* A seção inteira aparece suavemente (fade-in) */}
-        <div ref={servicosRef} className={`animate-on-scroll fade-in ${isServicosVisible ? 'is-visible' : ''}`}>
-          <Servicos />
-        </div>
-
-        <div ref={sobreRef} className={`animate-on-scroll slide-in-right ${isSobreVisible ? 'is-visible' : ''}`}>
-          <Sobre />
-        </div>
-
-        <div ref={faqRef} className={`animate-on-scroll scale-up ${isFaqVisible ? 'is-visible' : ''}`}>
-          <Faq />
-        </div>
-      </main>
       <Footer theme={theme} onThemeSwitch={handleThemeSwitch} />
     </>
   )

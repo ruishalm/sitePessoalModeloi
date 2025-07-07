@@ -1,4 +1,5 @@
 import styles from './Principal.module.css';
+import { Link } from 'react-router-dom';
 
 function Principal() {
   return (
@@ -11,7 +12,7 @@ function Principal() {
         <div className={styles.videoPlaceholder}>video de introducao</div>
       </div>
       <p>blablabla</p>
-      <a href="#/" className={styles.ctaButton}>BlaBlaBlog</a>
+      <Link to="/artigos" className={styles.ctaButton}>Ver Artigos</Link>
     </section>
   );
 }

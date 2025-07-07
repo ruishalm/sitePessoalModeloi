@@ -1,62 +1,79 @@
-.footerSection {
+.footerBackground {
     background-color: var(--cor-azul-escuro);
-    display: flex;
-    justify-content: space-between;
+    color: var(--cor-texto-claro);
+    padding: 30px 20px; /* Define a altura e o espaçamento vertical no fundo */
+}
+
+.footerContent {
+    display: grid; /* Usar grid para o layout de 3 colunas */
+    grid-template-columns: 1fr auto 1fr; /* Esquerda, Centro, Direita */
     align-items: center;
-    /* Regra global que também se aplica aqui */
     max-width: 1100px;
     margin-left: auto;
     margin-right: auto;
-    padding: 60px 20px;
     overflow: hidden;
+    gap: 20px;
 }
 
-.footerInfo {
-    color: var(--cor-texto-claro);
-    text-align: right;
+.footerLeft, .footerCenter, .footerRight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.footerLeft {
+    align-items: flex-start;
+}
+
+.footerRight {
+    align-items: flex-end;
     font-size: 0.9rem;
 }
 
-.footerInfo p {
-    margin: 5px 0;
+.footerRight p {
+    margin: 0;
 }
 
-.footerInfo a {
-    color: var(--cor-texto-claro);
-    text-decoration: none;
-    font-weight: 700;
+/* Estilo para o placeholder do logo do cliente */
+.headerLogo a {
+    display: block;
 }
 
-.footerLogo img {
-    width: 250px;
-    height: 80px;
-    background-color: #e0e0e0;
+.headerLogo img {
+    width: 150px;
+    height: 40px;
+    background-color: #e0e0e030; /* Placeholder semi-transparente */
     border-radius: 4px;
+}
+
+.crpInfo {
+    margin: 5px 0 0 0;
+    font-size: 0.9rem;
+    opacity: 0.8;
 }
 
 .developerCredit {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
     gap: 10px;
-    margin-top: 15px;
 }
 
 /* --- THEME SWITCHER --- */
 .themeSwitcher {
-    margin-top: 20px;
+    /* O seletor de tema já está centralizado pelo grid */
 }
 
 .themeButton {
     background: none;
     border: 1px solid var(--cor-texto-claro);
     color: var(--cor-texto-claro);
-    width: 40px;
-    height: 40px;
+    width: 32px; /* Botões menores */
+    height: 32px;
     border-radius: 50%;
     cursor: pointer;
     transition: all 0.3s ease;
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin: 0 5px;
     display: inline-flex;
     align-items: center;
@@ -71,30 +88,24 @@
 
 /* --- DARK THEME --- */
 /* Força o texto e o logo a serem claros no tema escuro, já que o fundo do rodapé é sempre escuro */
-:global(body.dark-theme) .footerInfo,
-:global(body.dark-theme) .footerInfo a {
+:global(body.dark-theme) .footerBackground {
     color: var(--cor-texto-escuro); /* No tema escuro, esta variável contém a cor clara */
 }
 
 /* Estilo para o botão ativo no tema escuro */
-:global(body.dark-theme) .active {
+:global(body.dark-theme) .themeButton.active {
     background-color: var(--cor-texto-escuro);
     color: var(--cor-bege-fundo);
 }
 
 /* --- RESPONSIVIDADE --- */
 @media (max-width: 768px) {
-    .footerSection {
-        flex-direction: column;
-        text-align: center;
+    .footerContent {
+        grid-template-columns: 1fr; /* Empilha as colunas */
+        gap: 15px;
     }
 
-    .footerInfo {
-        text-align: center;
-        margin-top: 20px;
-    }
-
-    .developerCredit {
-        justify-content: center;
+    .footerLeft, .footerCenter, .footerRight {
+        align-items: center; /* Centraliza tudo no mobile */
     }
 }

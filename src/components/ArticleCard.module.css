@@ -1,0 +1,55 @@
+.articleCard {
+    background-color: var(--cor-card-fundo);
+    border: 1px solid var(--cor-card-borda);
+    border-radius: 8px;
+    padding: 25px;
+    text-align: left; /* Artigos ficam melhor alinhados à esquerda */
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Garante que os cards na mesma linha tenham a mesma altura */
+}
+
+.articleCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-color: var(--cor-destaque);
+}
+
+.articleDate {
+    font-size: 0.8rem;
+    color: var(--cor-texto-escuro);
+    opacity: 0.6;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.articleTitle a {
+    font-size: 1.4rem;
+    color: var(--cor-texto-escuro);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.articleTitle a:hover {
+    color: var(--cor-destaque);
+}
+
+.articleSummary {
+    margin: 15px 0;
+    line-height: 1.7;
+    flex-grow: 1; /* Faz o resumo ocupar o espaço disponível, alinhando os links "Ler mais" */
+}
+
+.readMoreLink {
+    font-weight: 700;
+    color: var(--cor-destaque);
+    text-decoration: none;
+    transition: transform 0.3s ease;
+    margin-top: auto; /* Empurra o link para o final do card */
+}
+
+.readMoreLink:hover {
+    transform: translateX(5px);
+}
