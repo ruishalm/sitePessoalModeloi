@@ -1,5 +1,6 @@
 import styles from './Footer.module.css';
 import Logo from './Logo';
+import LogoTerapeuta from './LogoTerapeuta';
 
 // Define a interface para as propriedades que o componente vai receber.
 // Isso ajuda o TypeScript a garantir que estamos usando os tipos corretos.
@@ -11,9 +12,7 @@ interface FooterProps {
 function Footer({ theme, onThemeSwitch }: FooterProps) {
   return (
     <footer className={styles.footerSection}>
-      <div className={styles.footerLogo}>
-        <img src="" alt="Logo da Cliente" />
-      </div>
+      <div className={styles.footerLogo}><LogoTerapeuta /></div>
       <div className={styles.footerInfo}>
         <p><strong>Terapeuta TRG</strong></p>
         <p>Todos os Direitos Reservados</p>

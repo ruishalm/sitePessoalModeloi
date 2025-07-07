@@ -27,13 +27,6 @@
     font-weight: 700;
 }
 
-.footerLogo img {
-    width: 250px;
-    height: 80px;
-    background-color: #e0e0e0;
-    border-radius: 4px;
-}
-
 .developerCredit {
     display: flex;
     align-items: center;

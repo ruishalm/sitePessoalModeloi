@@ -1,4 +1,5 @@
 import styles from './Header.module.css';
+import LogoTerapeuta from './LogoTerapeuta';
 
 // Para manter o código limpo, o ícone do WhatsApp foi extraído para seu próprio componente.
 const WhatsAppIcon = () => (
@@ -15,9 +16,7 @@ function Header() {
     <header className={styles.stickyHeader}>
       <div className={styles.headerContent}>
         <div className={styles.headerLogo}>
-          <a href="#">
-            <img src="" alt="Logo da Cliente" />
-          </a>
+          <LogoTerapeuta />
         </div>
         <div className={styles.headerTitle}>
           Rosangela Chicarelli

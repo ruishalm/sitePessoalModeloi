@@ -1,0 +1,27 @@
+.logoLink {
+    text-decoration: none;
+}
+
+.logoText {
+    font-size: 1.6rem;
+    font-weight: 700;
+    /* Gradiente laranja para vermelho para o tema claro */
+    background: linear-gradient(45deg, var(--cor-azul-claro), var(--cor-destaque));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    /* Fallback para navegadores que não suportam o gradiente de texto */
+    color: var(--cor-destaque);
+    display: inline-block;
+}
+
+/* No tema escuro, o gradiente pode não ter bom contraste. Vamos usar cores sólidas. */
+:global(body.dark-theme) .logoText {
+    background: none;
+    -webkit-background-clip: unset;
+    background-clip: unset;
+    -webkit-text-fill-color: unset;
+    text-fill-color: unset;
+    color: var(--cor-texto-escuro); /* Cor de texto clara do tema escuro */
+}

@@ -29,19 +29,11 @@
     justify-self: start;
 }
 
-.headerLogo img {
-    height: 40px;
-    width: 150px;
-    background-color: #e0e0e0;
-    border-radius: 4px;
-    display: block;
-}
-
 .headerTitle {
     justify-self: center;
     font-weight: 500;
     color: var(--cor-texto-escuro);
-    font-size: 1.1rem;
+    font-size: 1.2rem; /* Aumentado um pouco, como sugerido */
     white-space: nowrap;
 }
 
@@ -65,17 +57,23 @@
 
     /* from .whatsapp-button */
     background-color: #25D366;
-    gap: 10px;
+    gap: 6px;
 
     /* from .small */
-    padding: 8px 16px;
-    font-size: 0.9rem;
+    padding: 6px 12px; /* Padding mais equilibrado */
+    font-size: 0.8rem;
 }
 
 .whatsappButton:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
     filter: brightness(1.1);
+}
+
+.whatsappButton svg {
+    /* Controla o tamanho do ícone explicitamente */
+    width: 14px;
+    height: 14px;
 }
 
 /* --- RESPONSIVIDADE --- */
@@ -94,6 +92,12 @@
     }
 
     .whatsappButton {
-        padding: 10px;
+        padding: 10px; /* Aumenta a área de toque no mobile */
+        border-radius: 50%; /* Deixa o botão redondo quando só o ícone é visível */
+    }
+
+    .whatsappButton svg {
+        width: 18px; /* Ícone um pouco maior para compensar a falta de texto */
+        height: 18px;
     }
 }
