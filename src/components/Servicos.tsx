@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './Servicos.module.css';
 import ServiceCard from './ServiceCard';
 
