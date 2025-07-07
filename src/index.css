@@ -10,7 +10,9 @@
     --cor-destaque: #EE6C4D;
     --cor-texto-escuro: #293241;
     --cor-texto-claro: #F4F1DE;
-    --cor-texto-secundario: #888;
+    --cor-card-fundo: #FFFFFF;
+    --cor-card-fundo-ativo: #f9f9f9;
+    --cor-card-borda: #e0e0e0;
 }
 
 body {
@@ -40,7 +42,9 @@ body.dark-theme {
     --cor-bege-secao: #3D5A80;
     --cor-texto-escuro: #F4F1DE;
     --cor-texto-claro: #293241;
-    --cor-texto-secundario: #98C1D9;
+    --cor-card-fundo: #4a6180;
+    --cor-card-fundo-ativo: #556b8b;
+    --cor-card-borda: #556b8b;
 }
 
 /* --- RESPONSIVIDADE --- */

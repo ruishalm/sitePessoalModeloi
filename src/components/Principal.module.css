@@ -46,7 +46,7 @@
     aspect-ratio: 16 / 9;
     background-color: white;
     border: 1px solid #ddd;
-    color: var(--cor-texto-secundario);
+    color: #888;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -72,6 +72,12 @@
     transform: translateY(-3px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
     filter: brightness(1.1);
+}
+
+/* --- DARK THEME --- */
+/* Força o texto a ser claro no tema escuro, já que o fundo é sempre escuro */
+:global(body.dark-theme) .principalSection {
+    color: var(--cor-texto-escuro); /* No tema escuro, esta variável contém a cor clara */
 }
 
 :global(body.dark-theme) .videoPlaceholder {

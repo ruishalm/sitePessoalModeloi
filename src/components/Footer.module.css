@@ -42,61 +42,6 @@
     margin-top: 15px;
 }
 
-/* --- RAFA MUNHOZ LOGO (Adaptado para o Footer) --- */
-.svgLogoLink {
-    display: inline-block;
-    text-decoration: none;
-}
-
-.rafaMunhozLogo {
-    width: 140px; /* Tamanho menor para o rodapé */
-    height: auto;
-    overflow: visible;
-}
-
-.rafaMunhozLogo text,
-.rafaMunhozLogo tspan {
-    font-family: 'Roboto', sans-serif;
-    font-size: 24px; /* Tamanho menor para o rodapé */
-}
-
-.rafaMunhozLogo .logoFirstName {
-    font-weight: 700;
-    fill: var(--cor-texto-claro); /* Cor para o rodapé */
-    transition: fill 0.4s ease;
-}
-
-.rafaMunhozLogo .logoLastName {
-    font-weight: 400;
-    fill: var(--cor-texto-claro); /* Cor para o rodapé */
-}
-
-.rafaMunhozLogo .logoUnderline {
-    stroke: var(--cor-destaque);
-    stroke-width: 2.5;
-    fill: none;
-    stroke-dasharray: 195;
-    stroke-dashoffset: 195;
-    transition: stroke-dashoffset 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-}
-
-.rafaMunhozLogo .logoFlair {
-    fill: var(--cor-destaque);
-    transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.svgLogoLink:hover .logoUnderline {
-    stroke-dashoffset: 0;
-}
-
-.svgLogoLink:hover .logoFirstName {
-    fill: var(--cor-destaque);
-}
-
-.svgLogoLink:hover .logoFlair {
-    transform: translate(195px, 25px) rotate(180deg);
-}
-
 /* --- THEME SWITCHER --- */
 .themeSwitcher {
     margin-top: 20px;
@@ -125,13 +70,10 @@
 }
 
 /* --- DARK THEME --- */
-/* O rodapé tem fundo escuro em ambos os temas, então o texto precisa ser claro em ambos. */
+/* Força o texto e o logo a serem claros no tema escuro, já que o fundo do rodapé é sempre escuro */
 :global(body.dark-theme) .footerInfo,
-:global(body.dark-theme) .footerInfo a,
-:global(body.dark-theme) .rafaMunhozLogo .logoFirstName,
-:global(body.dark-theme) .rafaMunhozLogo .logoLastName {
-    color: var(--cor-texto-escuro); /* No tema escuro, --cor-texto-escuro é a cor clara */
-    fill: var(--cor-texto-escuro);
+:global(body.dark-theme) .footerInfo a {
+    color: var(--cor-texto-escuro); /* No tema escuro, esta variável contém a cor clara */
 }
 
 /* Estilo para o botão ativo no tema escuro */

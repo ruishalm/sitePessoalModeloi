@@ -20,7 +20,7 @@
     object-fit: cover;
     background-color: white;
     border: 1px solid #ddd;
-    color: var(--cor-texto-secundario);
+    color: #888;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -39,6 +39,7 @@
 :global(body.dark-theme) .aboutImage img {
     background-color: #3D5A80;
     border-color: #556b8b;
+    color: var(--cor-azul-claro);
 }
 
 /* --- RESPONSIVIDADE --- */
