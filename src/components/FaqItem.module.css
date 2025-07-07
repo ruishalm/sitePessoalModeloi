@@ -15,11 +15,12 @@
 }
 
 .accordionHeader {
-    padding: 15px;
+    /* Aumenta o padding à direita para evitar que o texto fique embaixo do ícone '+' */
+    padding: 15px 50px 15px 15px;
     font-weight: 500;
     cursor: pointer;
     position: relative;
-    user-select: none;
+    user-select: none; /* Impede que o texto seja selecionado ao clicar */
 }
 
 .accordionHeader::after {
@@ -41,7 +42,8 @@
 .faqContent {
     overflow: hidden;
     max-height: 0;
-    transition: max-height 0.4s ease-out;
+    /* Aumenta a duração da transição para uma animação mais suave */
+    transition: max-height 0.6s ease-out;
 }
 
 .accordionItem.isOpen .faqContent {
